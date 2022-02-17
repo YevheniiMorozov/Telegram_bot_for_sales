@@ -81,8 +81,13 @@ async def load_description(message: types.Message, state=FSMContext):
 @dp.message_handler(state=FSMAdmin.price)
 async def load_price(message: types.Message, state=FSMContext):
     if message.from_user.id == ID:
+        try:
+            price = float(message.text)
+        except ValueError:
+            await message.answer("Ціна має містити у собі лише цифри")
+            return
         async with state.proxy() as data:
-            data['price'] = float(message.text)
+            data['price'] = price
 
         await sql_add_command(state)
         await message.answer(f"Товар збережений у категорії {data['category']}")

@@ -1,2 +1,5 @@
 aiogram<3.0
 environs~=8.0.0
+attrs==19.1.0
+aiograph==0.2
+aioredis==2.0.1
