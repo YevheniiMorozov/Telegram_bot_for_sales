@@ -8,6 +8,7 @@ from aiograph import Telegraph
 
 telegraph = Telegraph()
 bot = Bot(token=config.BOT_TOKEN, parse_mode=types.ParseMode.HTML)
+# storage = MemoryStorage()
 storage = RedisStorage2()
 dp = Dispatcher(bot, storage=storage)
 tx = Text

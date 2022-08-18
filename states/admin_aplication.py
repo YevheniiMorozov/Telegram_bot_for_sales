@@ -7,3 +7,7 @@ class FSMAdmin(StatesGroup):
     name = State()
     description = State()
     price = State()
+
+
+class Mailing(StatesGroup):
+    Text = State()

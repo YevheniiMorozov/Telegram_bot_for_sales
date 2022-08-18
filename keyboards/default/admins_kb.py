@@ -1,7 +1,7 @@
 from aiogram.types import ReplyKeyboardMarkup
 
 
-admin_kb = ["Додати лот", "Видалити лот"]
+admin_kb = ["Додати лот", "Видалити лот", "Розповісти всім"]
 admin_keyboards = ReplyKeyboardMarkup(resize_keyboard=True)
 admin_keyboards.add(*admin_kb)
 
